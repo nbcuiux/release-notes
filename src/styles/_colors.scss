@@ -1,0 +1,86 @@
+$color_primary: #f5f5f5;
+$color_secondary: #fff;
+$color_gray: #7b7b7b;
+$color_link: #E85D75;
+
+$color-purple: #aba0cb;
+$color-green: #b2cb95;
+$color-tan: #dbc3a1;
+$color-blue: #76d4e4;
+$color-pink: #E85D75;
+$color-yellow: #eeb336;
+
+@mixin make-color-tile($color-name, $hex) {
+	.grid__item {
+		&.#{$color-name} {
+			.circle {
+				// background-color: $hex;
+			}
+			&:hover, &:focus {
+				&:before {
+					border-color: rgba($hex, .6);
+				}
+			}
+			.loader {
+				&:before {
+					background-color: $hex;
+				}
+			}
+		}
+	}
+}
+
+@mixin make-color-page($color-name, $hex) {
+	.content__item {
+		&.#{$color-name} {
+			.postArticle {
+				.postTitle a {
+					color: $hex; 
+				}
+			}
+			.category {
+				color: $hex;
+			}
+			.readMore a {
+				color: $hex;
+			}
+		}
+	}
+}
+
+@mixin make-color-menu($color-name, $hex) {
+	#ml-menu {
+		&.#{$color-name} {
+			.bottom-level:hover:before,
+			.menu__breadcrumbs a,
+			.menu__link:hover, .menu__link:focus, .menu__link[data-submenu]:hover::after, .menu__link[data-submenu]:focus::after
+			 {
+				color: $hex;
+			}
+		}
+	}
+}
+
+@include make-color-tile(purple, $color-purple);
+@include make-color-tile(yellow, $color-yellow);
+@include make-color-tile(green, $color-green);
+@include make-color-tile(blue, $color-blue);
+@include make-color-tile(pink, $color-pink);
+@include make-color-tile(tan, $color-tan);
+
+@include make-color-page(purple, $color-purple);
+@include make-color-page(yellow, $color-yellow);
+@include make-color-page(green, $color-green);
+@include make-color-page(blue, $color-blue);
+@include make-color-page(pink, $color-pink);
+@include make-color-page(tan, $color-tan);
+
+@include make-color-menu(purple, $color-purple);
+@include make-color-menu(yellow, $color-yellow);
+@include make-color-menu(green, $color-green);
+@include make-color-menu(blue, $color-blue);
+@include make-color-menu(pink, $color-pink);
+@include make-color-menu(tan, $color-tan);
+
+
+

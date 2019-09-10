@@ -1,0 +1,220 @@
+.meta {
+  &.meta--full {
+    .tree-view {
+      width: 280px;
+      margin: 0 0 0 -30px;
+
+      .checkbox {
+        strong, span {
+          max-width: 180px;
+        }
+      }
+    }
+  }
+}
+
+.tree-view {
+  align-self: center;
+  font-size: 14px;
+  width: 300px;
+  margin: auto;
+  margin: -21px 0 0 -21px;
+  text-align: left;
+
+  &__title {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.65em;
+    margin: 6px 18px 9px;
+    padding-bottom: 12px;
+    letter-spacing: 0.012em;
+    border-bottom: solid 1px;
+  }
+}
+
+.tree-view .checkbox {
+  padding: 9px;
+  margin: 0
+}
+
+.tree-view ul {
+  margin: 0 0 0 0px;
+  padding: 1em 0 0 9px;
+  list-style: none;
+}
+.tree-view .root {
+  padding-left: 10px;
+}
+.tree-view .is-folder ul {
+  border-left: 1px dotted #DDD;
+}
+.tree-view .checkbox {
+  display: flex;
+  align-items: center;
+
+  input {
+    //display: none;
+  }
+  span, strong {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 212px;
+    line-height: 21px;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin-right: 6px;
+    
+  }
+  span{
+    cursor: pointer;
+  }
+  i {
+    margin-right: 6px;
+  }
+  
+}
+
+input {
+      display: none;
+
+      ~ label {
+        display: flex;
+        align-items: center;
+
+        .circle {
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          border: solid 1px $color-gray;
+          margin-right: 6px;
+        }
+
+        p {
+          margin: 0;
+          line-height: 1;
+          padding-top: 3px;
+          font-size: 13px;
+          white-space: nowrap;
+          width: 240px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      &:checked {
+        ~ label {
+          .circle {
+            background: $color-gray;
+          }
+        }
+      }
+    }
+
+input {
+      display: none;
+
+      ~ label {
+        display: flex;
+        align-items: center;
+
+        .circle {
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          border: solid 1px $color-gray;
+          margin-right: 6px;
+        }
+
+        p {
+          margin: 0;
+          line-height: 1;
+          padding-top: 3px;
+          font-size: 13px;
+          white-space: nowrap;
+          width: 240px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      &:checked {
+        ~ label {
+          .circle {
+            background: $color-gray;
+          }
+        }
+      }
+    }
+    #filter1, #filter4,  {
+      ~ label .circle {
+        border-color: $color-link;
+      }
+      &:checked ~ label .circle {
+        background-color: $color-link;
+      }
+    }
+    #filter2, #filter3, #filter4 {
+      ~ label .circle {
+        border-color: $color-green;
+      }
+      &:checked ~ label .circle {
+        background-color: $color-green;
+      }
+    }
+    #filter5, #filter6 {
+      ~ label .circle {
+        border-color: $color-purple;
+      }
+      &:checked ~ label .circle {
+        background-color: $color-purple;
+      }
+    }
+
+
+.is-folder > .checkbox {
+  position: relative;
+  padding-left: 15px;  
+  border-color: #DDD;
+  font-weight: bold;
+}
+.is-folder > .checkbox > a.folder-toggle {
+  display: block;
+  position: absolute;
+  top: 50%; left: 3px;
+  width: 0; height: 0; 
+  margin-top: -3px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid #666;
+}
+.is-folder.open > .checkbox > a.folder-toggle {
+  display: block;
+  position: absolute;
+  top: 50%; left: 3px;
+  width: 0; height: 0; 
+  margin-top: -4px;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #666;
+  border-left: 4px solid transparent;
+}
+
+.is-folder > ul {
+  display: none;
+}
+.is-folder.open > ul {
+  display: block;
+}
+
+.folding {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.visible {
+  display: flex;
+}
+

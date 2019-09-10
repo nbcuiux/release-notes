@@ -1,0 +1,32 @@
+{
+  "name": "release-notes-prototype",
+  "version": "1.0.0",
+  "description": "UX prototype for the Jira Release Notes project.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-css-globbing": "^0.2.2",
+    "gulp-iconfont": "^5.0.1",
+    "gulp-less": "^3.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5",
+    "node-bourbon": "^4.2.8",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.5"
+  }
+}
