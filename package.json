@@ -27,6 +27,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.19"
   }
 }
